@@ -1,4 +1,3 @@
-
 name: ReplyIssueCreate
 
 on:
@@ -34,7 +33,7 @@ jobs:
         
     - uses: actions/github-script@0.4.0
       with:
-        github-token: ${{ secrets.TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
             let reg = /\[Host\]\d{4}-\d{2}-\d{2}/
             if (!reg.test("${{ github.event.issue.title }}")) {
@@ -42,7 +41,7 @@ jobs:
                 const localTime = d.getTime();
                 const localOffset = d.getTimezoneOffset() * 60000;   //getTimezoneOffset()返回是以分钟为单位，需要转化成ms
                 const utc = localTime + localOffset;
-                const offset = 8; //东8区
+                const offset = 8; //东八区
                 const beijing = utc + (3600000 * offset);
                 const nd = new Date(beijing);
                 let year = "" + nd.getFullYear();
