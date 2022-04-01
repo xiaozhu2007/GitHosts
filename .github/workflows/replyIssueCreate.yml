@@ -34,7 +34,7 @@ jobs:
         
     - uses: actions/github-script@0.4.0
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.TOKEN }}
         script: |
             let reg = /\[Host\]\d{4}-\d{2}-\d{2}/
             if (!reg.test("${{ github.event.issue.title }}")) {
