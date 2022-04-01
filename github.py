@@ -97,7 +97,7 @@ if __name__ == "__main__":
     date_now = get_now_date_str()
     lines = []
     lines.append('# GitHub Start')
-    lines.append('# from https://github.com/ButterAndButterfly/GithubHost')
+    lines.append('# from https://github.com/xz-deploy/GithubHost')
     lines.append('# Last update at %s (Beijing Time)'%date_now)
     for ip, domain in socket_query.gen_host():
         lines.append("%s %s"%(ip, domain))
@@ -112,8 +112,8 @@ if __name__ == "__main__":
         body = \
         """
 + 你可以通过以下的地址获取附件中的host文件
-    + Github源地址:   <https://github.com/ButterAndButterfly/GithubHost/releases/download/v1/host.txt>
-    + Github镜像: <https://hub.fastgit.org/ButterAndButterfly/GithubHost/releases/download/v1/host.txt>
+    + Github源地址:   <https://github.com/xz-deploy/GithubHost/releases/download/v1/host.txt>
+    + Github镜像: <https://index.pig2333.workers.dev/xz-deploy/GithubHost/releases/download/v1/host.txt>
 + host文件将由机器人每天定时刷新，最后更新于(北京时间)：
         """
         body += date_now
