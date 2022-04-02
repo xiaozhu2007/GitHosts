@@ -2,7 +2,7 @@ name: CreateIssue
 
 on:
    schedule: 
-       - cron: '1 0 1,30 * *'
+       - cron: '0 0 1-30 * *'
    label:
        types: [edited]
 jobs:
@@ -105,7 +105,7 @@ jobs:
             const year = date.getFullYear().toString();
             const month = (date.getMonth() + 1).toString();
             const day = date.getDate().toString();
-            const title = year + '-' + month + '-' + day + ' github hosts';
+            const title = year + '-' + month + '-' + day + ' GitHub hosts';
             var fs = require("fs");
             fs.readFile("hosts.txt", 'utf-8', (err, data) => {
                 github.issues.create({
