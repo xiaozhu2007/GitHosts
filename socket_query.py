@@ -22,7 +22,7 @@ domains = [
     'repository-images.githubusercontent.com',
     'uploads.github.com',                                   # 用途包括但不限于: release附件上传
     'git.io',                                   # 用途包括但不限于: Git.io短链接
-    'xiaozhu2007.github.io',                                   # 用途包括但不限于: 作者博客
+    'allcontributors.org',                                   # 用途包括: All Contributors . org
     'user-images.githubusercontent.com',
 ]
 
