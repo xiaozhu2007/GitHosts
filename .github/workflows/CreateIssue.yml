@@ -2,7 +2,7 @@ name: CreateIssue
 
 on:
    schedule: 
-       - cron: '0 12 1-30 * *'
+       - cron: '0 10 * * *'
    label:
        types: [edited]
 jobs:
