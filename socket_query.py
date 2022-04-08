@@ -18,6 +18,8 @@ domains = [
     'github.githubassets.com',
     'marketplace-screenshots.githubusercontent.com',
     'octocaptcha.com',                                      # 用途包括但不限于: 创建organization时的验证码
+    'xiaozhu2007.github.io',
+    'xiaozhu2021.github.io',
     'raw.githubusercontent.com',
     'repository-images.githubusercontent.com',
     'uploads.github.com',                                   # 用途包括但不限于: release附件上传
