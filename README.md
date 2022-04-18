@@ -31,6 +31,10 @@
 - 单击“完成”
 
 ## 注意事项
-+ 请移步[Issue](https://github.com/xiaozhu2007/GitHosts/issues/)页面 
++ 请移步[Issue]页面 
 + 更改Hosts后，注意使用`ipconfig /flushdns`刷新DNS缓存
 
+
+
+[SwitchHosts]:https://swh.app/zh/
+[Issue]:https://github.com/xiaozhu2007/GitHosts/issues/
