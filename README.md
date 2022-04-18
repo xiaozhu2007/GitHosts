@@ -2,7 +2,7 @@
 
 <p align="center">
     <br />
-    <strong>The world's most optimised MIDI renderer!</strong>
+    <strong>The world's #3 hosts collection!</strong>
 </p>
 
 <p align="center">
@@ -10,6 +10,7 @@
     <a href="https://github.com/xiaozhu2007/GitHosts/releases/"><img src="https://img.shields.io/github/downloads/xiaozhu2007/GitHosts/total.svg?style=flat-square" alt="GitHub release"></a>
     <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>
 </p>
+
 ## 前言  
 因为域名被DNS污染，GitHub被`不可告人的秘密`了，遂有了这个工程
 
