@@ -26,6 +26,7 @@ domains = [
     'git.io',                                   # 用途包括但不限于: Git.io短链接
     'allcontributors.org',                                   # 用途包括: All Contributors . org
     'user-images.githubusercontent.com',
+    'x-status.pages.dev',
 ]
 
 def gen_host():
