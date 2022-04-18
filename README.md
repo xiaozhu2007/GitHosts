@@ -1,6 +1,6 @@
 # GitHosts
 ## 前言  
-因为域名被DNS污染，GitHub被GFW墙了，遂有了这个工程
+因为域名被DNS污染，GitHub被`不可告人的秘密`了，遂有了这个工程
 
 ## 广而告之  
 现在主流浏览器基本上都支持DNS-Over-HTTPS，很大程度上可以替代本项目
@@ -15,9 +15,20 @@
     + 举例[issue #1](https://github.com/xiaozhu2007/GitHosts/issues/1)
 + 支持通过http链接获取host文件  
     + 你可以通过以下的地址获取附件中的host文件
-        + Github源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v1/host.txt>
-        + Github镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v1/host.txt>
+        + Github源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
+        + Github镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
     + Host文件将由Github Actions机器人每天定时刷新，当有issue提交时也会触发构建
+
+
+## SwitchHosts部署
+
+- 下载打开[SwitchHosts]
+- 单击左上角的“添加Hosts”
+- 选择“远程”
+- “Hosts 标题” 填写 `GitHosts`
+- “URL” 填写 上方的Github镜像地址
+- “自动刷新” 填写 `15分钟`
+- 单击“完成”
 
 ## 注意事项
 + 请移步[Issue](https://github.com/xiaozhu2007/GitHosts/issues/)页面 
