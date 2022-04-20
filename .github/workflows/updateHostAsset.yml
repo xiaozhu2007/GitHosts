@@ -45,5 +45,6 @@ jobs:
         MY_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         MY_OWNER: ${{ github.repository_owner }}
         MY_REPOSITORY: ${{ github.repository }}
+        MY_TOKEN: ${{ secrets.TOKEN }}
       run: |
         python github.py
