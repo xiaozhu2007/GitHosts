@@ -4,25 +4,24 @@
 import socket
 from datetime import datetime, timedelta, timezone
 domains = [
-    'api.github.com',
-    'assets-cdn.github.com',
+    'api.github.com',                         # Github API
+    'assets-cdn.github.com',               # Github CDN
     'avatars.githubusercontent.com',
     'avatars0.githubusercontent.com',
-    'camo.githubusercontent.com',
+    'camo.githubusercontent.com',                         # Github Camo 服务 
     'cloud.githubusercontent.com',
     'codeload.github.com',
     'favicons.githubusercontent.com',
     'gist.github.com',
     'gist.githubusercontent.com',
-    'github.com',
+    'github.com',                              # 网站本体
     'github.githubassets.com',
     'marketplace-screenshots.githubusercontent.com',
-    'octocaptcha.com',                                      # 用途包括但不限于: 创建organization时的验证码
-    'xiaozhu2007.github.io',
-    'xiaozhu2021.github.io',
+    'octocaptcha.com',                                      # 用途包括但不限于: 创建用户、组织、重设密码、验证真人时的验证码
+    'xiaozhu2007.github.io',                              # Github.io子域名
     'raw.githubusercontent.com',
     'repository-images.githubusercontent.com',
-    'uploads.github.com',                                   # 用途包括但不限于: release附件上传
+    'uploads.github.com',                                   # 用途包括但不限于: Release附件上传
     'git.io',                                   # 用途包括但不限于: Git.io短链接
     'allcontributors.org',                                   # 用途包括: All Contributors . org
     'user-images.githubusercontent.com',
