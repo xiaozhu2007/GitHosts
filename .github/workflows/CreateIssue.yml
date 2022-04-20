@@ -28,7 +28,7 @@ jobs:
       uses: actions/github-script@0.4.0
       id: check
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.TOKEN }}
         result-encoding: string
         script: |
             let response = await github.issues.listForRepo({
@@ -64,7 +64,7 @@ jobs:
       uses: actions/github-script@0.4.0
       if: ${{ steps.check.outputs.result == 'valid'}}
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.TOKEN }}
         script: |
             let response = await github.issues.listForRepo({
                 owner: context.repo.owner,
