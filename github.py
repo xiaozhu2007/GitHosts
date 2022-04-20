@@ -39,7 +39,8 @@ class GithubHelper:
             "body": body
         }
         res = requests.request("PATCH", url, data=json.dumps(param), headers=headers).json()
-        #print(res)
+        print("Gists API Res")
+        print(res)
         return res 
         
     def updateReleaseAsset(self, asset_id, name, **args):
