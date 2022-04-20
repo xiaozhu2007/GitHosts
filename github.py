@@ -31,10 +31,11 @@ class GithubHelper:
         #print(res)
         return res 
     
-    def updateReleaseBody(self, gists_id, body, **args):
-        url = 'https://api.github.com/gists/%d'%(release_id)
+    def updateGistsBody(self, gists_id, body, **args):
+        url = 'https://api.github.com/gists/%d'%(gists_id)
         headers = {'User-Agent': 'None', 'Accept': 'application/vnd.github.v3.+json', "Authorization": "token "+ self.bot_auth}
         param = {
+            "file": "hosts.txt",
             "body": body
         }
         res = requests.request("PATCH", url, data=json.dumps(param), headers=headers).json()
@@ -125,5 +126,6 @@ if __name__ == "__main__":
         """
         body += date_now
         body = body.strip()
+        helper.updateGistsBody(gists_id = '471c25d4bc6f9891033216cb27097556', body=body)
         helper.updateReleaseBody(release_id = release_info["id"], body=body)
 
