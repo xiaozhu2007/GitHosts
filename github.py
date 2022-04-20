@@ -7,8 +7,9 @@ import socket_query
 
 class GithubHelper:
     
-    def __init__(self, owner, repo, auth, **args):
+    def __init__(self, owner, repo, auth, bot_auth, **args):
         self.auth = auth
+        self.bot_auth = bot_auth
         self.owner = owner
         self.repo = repo
         
@@ -23,6 +24,16 @@ class GithubHelper:
     def updateReleaseBody(self, release_id, body, **args):
         url = 'https://api.github.com/repos/%s/%s/releases/%d'%(self.owner, self.repo, release_id)
         headers = {'User-Agent': 'None', 'Accept': 'application/vnd.github.v3.+json', "Authorization": "token "+ self.auth}
+        param = {
+            "body": body
+        }
+        res = requests.request("PATCH", url, data=json.dumps(param), headers=headers).json()
+        #print(res)
+        return res 
+    
+    def updateReleaseBody(self, gists_id, body, **args):
+        url = 'https://api.github.com/gists/%d'%(release_id)
+        headers = {'User-Agent': 'None', 'Accept': 'application/vnd.github.v3.+json', "Authorization": "token "+ self.bot_auth}
         param = {
             "body": body
         }
@@ -77,23 +88,18 @@ def load_from_env():
     owner = os.environ.get('MY_OWNER')
     repo = repo_full_name[len(owner) + 1:]
     token = os.environ.get('MY_GITHUB_TOKEN')
+    token = os.environ.get('MY_TOKEN')
     github_config = {
         "repo": repo,
         "owner": owner,
         "auth": token,
+        "bot_auth": bot_token
     }
     return github_config
 
      
 if __name__ == "__main__":
     github_config = load_from_env()
-    '''
-    github_config = {
-        "repo": "repo",
-        "owner": "owner",
-        "auth": "auth",
-    }
-    '''
     date_now = get_now_date_str()
     lines = []
     lines.append('# GitHosts Start')
