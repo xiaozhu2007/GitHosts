@@ -89,7 +89,7 @@ def load_from_env():
     owner = os.environ.get('MY_OWNER')
     repo = repo_full_name[len(owner) + 1:]
     token = os.environ.get('MY_GITHUB_TOKEN')
-    token = os.environ.get('MY_TOKEN')
+    bot_token = os.environ.get('MY_TOKEN')
     github_config = {
         "repo": repo,
         "owner": owner,
