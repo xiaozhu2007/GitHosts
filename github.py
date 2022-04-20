@@ -32,7 +32,7 @@ class GithubHelper:
         return res 
     
     def updateGistsBody(self, gists_id, body, **args):
-        url = 'https://api.github.com/gists/%d'%(gists_id)
+        url = 'https://api.github.com/gists/%s'%(gists_id)
         headers = {'User-Agent': 'None', 'Accept': 'application/vnd.github.v3.+json', "Authorization": "token "+ self.bot_auth}
         param = {
             "file": "hosts.txt",
