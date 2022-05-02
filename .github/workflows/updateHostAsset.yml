@@ -7,7 +7,7 @@ on:
     paths:
       - "**"
   schedule: 
-    - cron: '0 0,15,20 * * *'
+    - cron: '0,15,30,45 0,10,12 * * *'
   issues:
     types: [opened]
     
