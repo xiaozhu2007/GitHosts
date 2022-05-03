@@ -22,14 +22,16 @@
 利用GitHub Action进行相关网站的DNS查询, 将得到的结果发布到Issue页面和Release附件
 + 支持周期性自动发布
     + 每月1~30号发布issue
++ 支持API推送更新
+    + 试一试：<https://www.example.com/api>
 + 支持自动回复  
-    + 如果想查询最新的host，可以自己开个issue，机器人会自动回复
+    + 如果想查询最新的Hosts，可以自己开个Issue，机器人会自动回复
     + 举例[issue #1](https://github.com/xiaozhu2007/GitHosts/issues/1)
-+ 支持通过http链接获取host文件  
-    + 你可以通过以下的地址获取附件中的host文件
++ 支持通过http链接获取Hosts文件  
+    + 你可以通过以下的地址获取附件中的Hosts文件
         + Github源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
         + Github镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
-    + Host文件将由Github Actions机器人每天定时刷新，当有issue提交时也会触发构建
+    + Host文件将由Github Actions机器人每天定时刷新，当有Issue提交时也会触发构建
 
 
 ## SwitchHosts部署
