@@ -119,11 +119,11 @@ if __name__ == "__main__":
     if "id" in result:
         body = \
         """
-+ 你可以通过以下的地址获取附件中的host文件
++ 你可以通过以下的地址获取附件中的Host文件
     + Github源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
-    + Github镜像: <https://index.pig2333.workers.dev/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
-+ 现已支持SwitchHosts一键导入（详情见README）
-+ Host文件将由GitHub Action机器人每天定时刷新，最后更新于(北京时间)：
+    + Fastgit镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
++ 现已支持SwitchHosts一键导入（详情见README.md）
++ Host文件将由机器人AGDDoS-bot每天定时刷新，最后更新于(北京时间)：
         """
         body += date_now
         body = body.strip()
