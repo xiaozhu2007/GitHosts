@@ -1,9 +1,9 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 assignees:
-  - octocat
+  - xiaozhu2007
 body:
   - type: markdown
     attributes:
@@ -32,8 +32,9 @@ body:
       label: Version
       description: What version of our software are you running?
       options:
-        - 手动更新
-        - SwitchHosts集成
+        - Manual Update
+        - Issues Update
+        - SwitchHosts Update
     validations:
       required: true
   - type: textarea
