@@ -105,7 +105,7 @@ jobs:
             const year = date.getFullYear().toString();
             const month = (date.getMonth() + 1).toString();
             const day = date.getDate().toString();
-            const title = year + '-' + month + '-' + day + ' GitHub hosts';
+            const title = '[Hosts]' + year + '-' + month + '-' + day;
             var fs = require("fs");
             fs.readFile("hosts.txt", 'utf-8', (err, data) => {
                 github.issues.create({
