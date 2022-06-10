@@ -25,13 +25,13 @@ jobs:
  
     
     - name: Close issues of hosts label, return 'invalid' if latest action runs within an hour
-      uses: actions/github-script@0.4.0
+      uses: actions/github-script@6.1.0
       id: check
       with:
         github-token: ${{ secrets.TOKEN }}
         result-encoding: string
         script: |
-            let response = await github.issues.listForRepo({
+            let response = await github.rest.issues.listForRepo({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 labels: ['host'],
@@ -49,7 +49,7 @@ jobs:
                     if (deta < 1000 * 60 * 60) {
                         throw new Error("latest action runs within an hour");
                     }
-                    github.issues.update({
+                    github.restissues.update({
                         owner: context.repo.owner,
                         repo: context.repo.repo,
                         issue_number: id,
@@ -61,12 +61,12 @@ jobs:
                 return 'invalid';
             }
     - name: Close issues of out-dated host query
-      uses: actions/github-script@0.4.0
+      uses: actions/github-script@6.1.0
       if: ${{ steps.check.outputs.result == 'valid'}}
       with:
         github-token: ${{ secrets.TOKEN }}
         script: |
-            let response = await github.issues.listForRepo({
+            let response = await github.rest.issues.listForRepo({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 labels: ['host-query'],
@@ -87,7 +87,7 @@ jobs:
                     is2Deal = false;
                 }
                 if (is2Deal) {
-                    github.issues.update({
+                    github.rest.issues.update({
                         owner: context.repo.owner,
                         repo: context.repo.repo,
                         issue_number: id,
@@ -96,7 +96,7 @@ jobs:
                 }
             });
     - name: Create and lock issue to show hosts
-      uses: actions/github-script@0.4.0
+      uses: actions/github-script@6.1.0
       if: ${{ steps.check.outputs.result == 'valid'}}
       with:
         github-token: ${{ secrets.TOKEN }}
@@ -108,14 +108,14 @@ jobs:
             const title = '[Hosts]' + year + '-' + month + '-' + day;
             var fs = require("fs");
             fs.readFile("hosts.txt", 'utf-8', (err, data) => {
-                github.issues.create({
+                github.rest.issues.create({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     labels: ['host'],
                     title: title,
                     body: data
                 }).then((res) =>{
-                    github.issues.lock({
+                    github.rest.issues.lock({
                         owner: context.repo.owner,
                         repo: context.repo.repo,
                         issue_number: res.data.number,
