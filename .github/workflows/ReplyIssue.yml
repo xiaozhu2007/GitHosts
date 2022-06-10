@@ -8,9 +8,9 @@ jobs:
   permission:
     name: permission check
     runs-on: ubuntu-latest
-    if: ${{ github.actor != 'github-actions[bot]' && !startsWith(github.event.issue.title, '[Issue]') }}
+    if: ${{ github.actor != 'github-actions[bot]' && !startsWith(github.event.issue.title, '[Issue]') && !startsWith(github.event.issue.title, '[Hosts]') }}
     steps:
-    - name: check permission
+    - name: Check permission
       run: |
         echo ${{ github.actor }}
         echo permission pass
@@ -20,18 +20,20 @@ jobs:
     runs-on: ubuntu-latest
     needs: permission
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
            
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
+      id: setup
       with:
         python-version: 3.8
     
     - name: Generate github hosts
+      id: generate
       run: |
         python socket_query.py
         
-    - uses: actions/github-script@0.4.0
+    - uses: actions/github-script@6.1.0
       with:
         github-token: ${{ secrets.TOKEN }}
         script: |
@@ -51,7 +53,7 @@ jobs:
                 day = day >= 10 ? "" + day : "0" + day;
                 const title = `[Hosts]${year}-${month}-${day}`;
                 console.log("Issue's title is: " + title);
-                github.issues.update({
+                github.rest.issues.update({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     issue_number: context.issue.number,
@@ -60,13 +62,13 @@ jobs:
             }
             let fs = require("fs");
             fs.readFile("hosts.txt", 'utf-8', (err, data) => {
-                github.issues.createComment({
+                github.rest.issues.createComment({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     issue_number: context.issue.number,
                     body: data
                 }).then((res) => {
-                    github.issues.lock({
+                    github.rest.issues.lock({
                         owner: context.repo.owner,
                         repo: context.repo.repo,
                         issue_number: context.issue.number,
