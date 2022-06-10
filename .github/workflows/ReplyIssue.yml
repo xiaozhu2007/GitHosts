@@ -33,7 +33,7 @@ jobs:
       run: |
         python socket_query.py
         
-    - uses: actions/github-script@6.1.0
+    - uses: actions/github-script@v6.1.0
       with:
         github-token: ${{ secrets.TOKEN }}
         script: |
