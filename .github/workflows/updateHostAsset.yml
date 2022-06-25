@@ -1,13 +1,8 @@
 name: HostUpdate
 
-## 当有提交、有issue创建时触发，或者凌晨1点左右触发
-## 将最新host提交到release的附件
 on:    
-  push:
-    paths:
-      - "**"
   schedule: 
-    - cron: '0,15,30,45 0,10,12 * * *'
+    - cron: '*/20 */4 * * *'
   issues:
     types: [opened]
     
@@ -17,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'github-actions[bot]' || github.event_name == 'schedule' }}
     steps:
-    - name: check permission
+    - name: Check permission
       run: |
         echo ${{ github.actor }}
         echo ${{ github.event_name }}
