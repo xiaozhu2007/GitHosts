@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding:utf-8
 import os
 import requests,json
@@ -120,13 +120,12 @@ if __name__ == "__main__":
         body = \
         """
 + 你可以通过以下的地址获取附件中的Host文件
-    + Github源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
-    + Fastgit镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
+    - Github源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v2.1/host.txt>
+    - Fastgit镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2.1/host.txt>
 + 现已支持SwitchHosts一键导入（详情见README.md）
 + Host文件将由机器人[AGDDoS-bot](https://github.com/AGDDoS-bot)每天定时刷新，最后更新于(北京时间)：
         """
         body += date_now
         body = body.strip()
-        helper.updateGistsBody(gists_id = '471c25d4bc6f9891033216cb27097556', body=body)
         helper.updateReleaseBody(release_id = release_info["id"], body=body)
 
