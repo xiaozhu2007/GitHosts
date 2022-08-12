@@ -24,6 +24,7 @@ domains = [
     'uploads.github.com',                      # 用途包括但不限于: Release附件上传
     'git.io',                                  # 用途包括但不限于: Git.io短链接
     'user-images.githubusercontent.com',       # Github 用户上传的图片
+    'github.blog',                             # Github Blog
 ]
 
 def gen_host():
