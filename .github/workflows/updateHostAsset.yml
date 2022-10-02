@@ -2,7 +2,7 @@ name: HostUpdate
 
 on:    
   schedule: 
-    - cron: '*/20 */4 * * *'
+    - cron: '40 */4 * * *'
   issues:
     types: [opened]
     
