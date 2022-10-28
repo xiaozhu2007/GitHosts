@@ -4,27 +4,28 @@
 import socket
 from datetime import datetime, timedelta, timezone
 domains = [
-    'api.github.com',                          # Github API
-    'assets-cdn.github.com',                   # Github CDN
-    'avatars.githubusercontent.com',           # Github 头像CDN
-    'avatars0.githubusercontent.com',          # Github 头像CDN
-    'camo.githubusercontent.com',              # Github Camo 服务 
-    'cloud.githubusercontent.com',             # Github 储存桶
-    'codeload.github.com',                     # Github 前端渲染组件库
-    'favicons.githubusercontent.com',          # Github 图标等资源
-    'gist.github.com',                         # Github Gists
-    'gist.githubusercontent.com',              # Github Gists CDN(Raw)
-    'github.com',                              # Github 源站
-    'github.githubassets.com',                 # Github Assets
-    'marketplace-screenshots.githubusercontent.com',
-    'octocaptcha.com',                         # 用途包括但不限于: 创建用户、组织、重设密码、验证真人时的验证码
-    'xiaozhu2007.github.io',                   # Github.io子域名
-    'raw.githubusercontent.com',               # Github Raw
-    'repository-images.githubusercontent.com', # Github 仓库缩略图
-    'uploads.github.com',                      # 用途包括但不限于: Release附件上传
-    'git.io',                                  # 用途包括但不限于: Git.io短链接
-    'user-images.githubusercontent.com',       # Github 用户上传的图片
-    'github.blog',                             # Github Blog
+    'api.github.com',                                   # Github API
+    'assets-cdn.github.com',                            # Github CDN
+    'avatars.githubusercontent.com',                    # Github Avatars CDN
+    'avatars0.githubusercontent.com',                   # Github Avatars CDN
+    'camo.githubusercontent.com',                       # Github Camo 
+    'cloud.githubusercontent.com',                      # Github 储存桶
+    'codeload.github.com',                              # Github 前端渲染组件库
+    'favicons.githubusercontent.com',                   # Github CDN
+    'gist.github.com',                                  # Github Gists
+    'gist.githubusercontent.com',                       # Github Gists CDN(Raw)
+    'github.blog',                                      # Github Blog
+    'github.com',                                       # Github Website
+    'github.githubassets.com',                          # Github Assets
+    'github.dev',                                       # Github Online Editor (Like VSCode)
+    'marketplace-screenshots.githubusercontent.com',    # Github MarketPlace Preview
+    'octocaptcha.com',                                  # 创建用户、组织、重设密码、验证真人时的验证码
+    'xiaozhu2007.github.io',                            # Github.io
+    'raw.githubusercontent.com',                        # Github Raw
+    'repository-images.githubusercontent.com',          # Github Repository Images
+    'uploads.github.com',                               # Release
+    'git.io',                                           # Git.io
+    'user-images.githubusercontent.com'                 # Github users' images
 ]
 
 def gen_host():
