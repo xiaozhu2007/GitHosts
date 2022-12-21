@@ -9,15 +9,16 @@
     <a href="https://github.com/xiaozhu2007/GitHosts/releases/"><img src="https://img.shields.io/github/release/xiaozhu2007/GitHosts.svg?style=for-the-badge" alt="GitHub release"></a>
     <a href="https://github.com/xiaozhu2007/GitHosts/releases/"><img src="https://img.shields.io/github/downloads/xiaozhu2007/GitHosts/total.svg?style=for-the-badge" alt="GitHub release"></a>
     <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome"></a>
+    <a href="https://go.runba.cyou/auth/register?code=0u3Q"><img src="https://img.shields.io/badge/免费机场-签到领取流量-orange.svg?style=for-the-badge" alt="免费机场"></a>
 </p>
 
 ## 前言
 
-因为域名被DNS污染，GitHub被`不可告人的秘密|45voR/aswCD`了，遂有了这个工程
+因为域名被DNS污染，GitHub被`不可告人的秘密`了，遂有了这个工程
 
 ## 广而告之
 
-现在主流浏览器基本上都支持DNS-Over-HTTPS(Doh)，很大程度上可以替代本项目
+现在主流浏览器基本上都支持 DNS-Over-HTTPS(Doh) ，很大程度上可以替代本项目
 你可以根据实际情况进行选择
 
 ## 特性
