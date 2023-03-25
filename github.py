@@ -105,7 +105,7 @@ if __name__ == "__main__":
     date_now = get_now_date_str()
     lines = []
     lines.append('# GitHosts Start')
-    lines.append('# from https://github.com/xiaozhu2007/GitHosts/')
+    lines.append('# from https://github.com/xiaozhu2007/GitHosts')
     lines.append('# Last update at %s (Beijing Time)'%date_now)
     for ip, domain in socket_query.gen_host():
         lines.append("%s %s"%(ip, domain))
@@ -119,11 +119,11 @@ if __name__ == "__main__":
     if "id" in result:
         body = \
         """
-+ 你可以通过以下的地址获取附件中的Host文件
-    - Github源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v2.1/host.txt>
-    - Fastgit镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2.1/host.txt>
-+ 现已支持SwitchHosts一键导入（详情见README.md）
-+ Host文件将由机器人[AGDDoS-bot](https://github.com/AGDDoS-bot)每天定时刷新，最后更新于(北京时间)：
+- 你可以通过以下的地址获取附件中的 Host 文件
+  - Github 源地址: <https://github.com/xiaozhu2007/GitHosts/releases/download/v2.1/host.txt>
+  - Fastgit 镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2.1/host.txt>
+- 现已支持 `SwitchHosts` 一键导入（详情见 README.md）
+- Host 文件将由[机器人](https://github.com/HelloTools-bot)每天定时刷新，最后更新于(北京时间)：
         """
         body += date_now
         body = body.strip()
