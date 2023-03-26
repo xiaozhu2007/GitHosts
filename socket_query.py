@@ -59,7 +59,7 @@ def output_hosts():
         f.write('# GitHosts Start \n')
         f.write('# Last update at %s (UTC+8)\n'%(get_now_date_str()))
         for ip, domain in gen_host():
-            f.write('%s %s\n'%(ip, domain))
+            f.write('%s   %s\n'%(ip, domain))
         f.write('# GitHosts End \n')
         f.write('```\n')
 if __name__ == '__main__':
