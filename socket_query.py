@@ -36,7 +36,7 @@ domains = [
     'raw.githubusercontent.com',                        # Github Raw
     'repository-images.githubusercontent.com',          # Github Repository Images
     'uploads.github.com',                               # GIthub Release
-    'user-images.githubusercontent.com'                 # Github users' images
+    'user-images.githubusercontent.com',                # Github users' images
     'vscode.dev'                                        # vscode.dev - See: https://code.visualstudio.com/blogs/2021/10/20/vscode-dev
 ]
 
