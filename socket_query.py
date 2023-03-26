@@ -14,8 +14,8 @@ domains = [
     'avatars3.githubusercontent.com',                   # Github Avatars CDN
     'avatars4.githubusercontent.com',                   # Github Avatars CDN
     'camo.githubusercontent.com',                       # Github Camo 
-    'cloud.githubusercontent.com',                      # Github 储存桶
-    'codeload.github.com',                              # Github 前端渲染组件库
+    'cloud.githubusercontent.com',                      # Github Cloud
+    'codeload.github.com',                              # Github Frontend Render Component Library
     'collector.github.com',                             # Github Collect
     'desktop.githubusercontent.com',                    # Github Desktop [Software]
     'favicons.githubusercontent.com',                   # Github CDN
@@ -24,6 +24,7 @@ domains = [
     'git.io',                                           # Git.io
     'github.blog',                                      # Github Blog
     'github.com',                                       # Github Website
+    'github.community',                                 # Github Community
     'github.githubassets.com',                          # Github Assets CDN
     'github.dev',                                       # Github Online Editor & CodeSpace
     'github.io',                                        # Github.io
