@@ -4,28 +4,39 @@
 import socket
 from datetime import datetime, timedelta, timezone
 domains = [
+    'alive.github.com',                                 # Github Alive
     'api.github.com',                                   # Github API
     'assets-cdn.github.com',                            # Github CDN
     'avatars.githubusercontent.com',                    # Github Avatars CDN
     'avatars0.githubusercontent.com',                   # Github Avatars CDN
+    'avatars1.githubusercontent.com',                   # Github Avatars CDN
+    'avatars2.githubusercontent.com',                   # Github Avatars CDN
+    'avatars3.githubusercontent.com',                   # Github Avatars CDN
+    'avatars4.githubusercontent.com',                   # Github Avatars CDN
     'camo.githubusercontent.com',                       # Github Camo 
     'cloud.githubusercontent.com',                      # Github 储存桶
     'codeload.github.com',                              # Github 前端渲染组件库
+    'collector.github.com',                             # Github Collect
+    'desktop.githubusercontent.com',                    # Github Desktop [Software]
     'favicons.githubusercontent.com',                   # Github CDN
     'gist.github.com',                                  # Github Gists
     'gist.githubusercontent.com',                       # Github Gists CDN(Raw)
+    'git.io',                                           # Git.io
     'github.blog',                                      # Github Blog
     'github.com',                                       # Github Website
-    'github.githubassets.com',                          # Github Assets
-    'github.dev',                                       # Github Online Editor (Like VSCode)
+    'github.githubassets.com',                          # Github Assets CDN
+    'github.dev',                                       # Github Online Editor & CodeSpace
+    'github.io',                                        # Github.io
+    'githubstatus.com',                                 # Github Status
+    'media.githubusercontent.com',                      # Github Media CDN
     'marketplace-screenshots.githubusercontent.com',    # Github MarketPlace Preview
-    'octocaptcha.com',                                  # 创建用户、组织、重设密码、验证真人时的验证码
-    'xiaozhu2007.github.io',                            # Github.io
+    'octocaptcha.com',                                  # Github Captcha
+    'pipelines.actions.githubusercontent.com',          # Github Actions
     'raw.githubusercontent.com',                        # Github Raw
     'repository-images.githubusercontent.com',          # Github Repository Images
-    'uploads.github.com',                               # Release
-    'git.io',                                           # Git.io
+    'uploads.github.com',                               # GIthub Release
     'user-images.githubusercontent.com'                 # Github users' images
+    'vscode.dev'                                        # vscode.dev - See: https://code.visualstudio.com/blogs/2021/10/20/vscode-dev
 ]
 
 def gen_host():
