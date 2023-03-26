@@ -33,8 +33,8 @@
     + 举例[Issue #1](https://github.com/xiaozhu2007/GitHosts/issues/1)
 + 支持通过HTTPS链接获取Hosts文件  
     + 你可以通过以下的地址获取附件中的Hosts文件
-        * Github源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
-        * Github镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
+        * Github 源地址:   <https://github.com/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
+        * Github 镜像: <https://hub.fastgit.xyz/xiaozhu2007/GitHosts/releases/download/v2/host.txt>
     + Host文件将由Github Actions机器人每天定时刷新，当有Issue提交时也会触发构建
 
 
