@@ -2,7 +2,8 @@ name: HostUpdate
 
 on:    
   schedule: 
-    - cron: '40 */4 * * *'
+    - cron: '45 */4 * * *'
+  workflow_dispatch:
   issues:
     types: [opened]
     
